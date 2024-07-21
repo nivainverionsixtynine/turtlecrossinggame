@@ -1,0 +1,47 @@
+from turtle import Turtle
+
+FONT = ("Courier", 24, "normal")
+
+class Scoreboard(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.level = 1
+        self.hideturtle()
+        self.penup()
+        self.goto(-200, 250)  # Position the scoreboard at the top left corner
+        self.update_scoreboard()
+
+    def update_scoreboard(self):
+        self.clear()
+        self.write(f"Level: {self.level}", align="left", font=FONT)
+
+    def increase_level(self):
+        self.level += 1
+        self.update_scoreboard()
+from turtle import Turtle
+
+FONT = ("Courier", 24, "normal")
+
+
+class Scoreboard:
+    def __init__(self):
+        super().__init__()
+        self.level = 1
+        self.hideturtle()
+        self.penup()
+        self.goto(-200, 250)  # Position the scoreboard at the top left corner
+        self.update_scoreboard()
+        self.write(f"level: {self.level}" , align="left", font = FONT)
+        screen.update()
+
+    def update_scoreboard(self):
+        self.clear()
+        self.write(f"level: {self.level}", align="left", font=FONT)
+
+    def increase_level(self):
+        level += 1
+
+    def game_over(self):
+        self.goto(0,0)
+        self.write(f"game over" , align = "e" , font= FONT)
+
